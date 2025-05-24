@@ -15,7 +15,7 @@ public class XmlFunction
     }
 
     [Function("Function")]
-    public void Run([TimerTrigger("0 */1 * * * *")] TimerInfo myTimer)
+    public void Run([TimerTrigger("0 */30 * * * *")] TimerInfo myTimer)
     {
         try {
             string xmlPath = Path.Combine(Environment.CurrentDirectory, "file-area.xml");

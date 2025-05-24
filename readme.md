@@ -1,11 +1,12 @@
-# TimerTrigger - C<span>#</span>
+# Azure Function - Reading XML file
 
-The `TimerTrigger` makes it incredibly easy to have your functions executed on a schedule. This sample demonstrates a simple use case of calling your function every 5 minutes.
+Este proyecto ejecuta un Azure Function con Time Trigger cada 30 minutos, procesando un archivo XML.
 
-## How it works
+## Funcionalidad
 
-For a `TimerTrigger` to work, you provide a schedule in the form of a [cron expression](https://en.wikipedia.org/wiki/Cron#CRON_expression)(See the link for full details). A cron expression is a string with 6 separate expressions which represent a given schedule via patterns. The pattern we use to represent every 5 minutes is `0 */5 * * * *`. This, in plain text, means: "When seconds is equal to 0, minutes is divisible by 5, for any hour, day of the month, month, day of the week, or year".
+La función realiza las siguientes tareas:
 
-## Learn more
-
-<TODO> Documentation
+1. Lee el archivo XML (`file-area.xml`).
+2. Imprime cuantos nodos `<area>` existen.
+3. Imprime cuantos nodos `<area>` tienen más de 2 empleados.
+4. Por último, por cada `<area>` imprime su nombre y a suma total de los salarios, separados por un pipe (`|`).
